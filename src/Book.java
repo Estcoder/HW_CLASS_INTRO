@@ -16,14 +16,11 @@ public class Book {
     }
 
     public boolean isBig() {
-        if (pages > 500) {
-            return true;
-        } else {
-            return false;
+        return pages > 500;
         }  // The same method can be written in more simple way like:
         // return pages > 500;  instead of IF statement
 
-    }
+
 
 
     public int estimatePrice() {
@@ -39,7 +36,7 @@ public class Book {
     public boolean matches(String word) {
 
 
-        if (author.getName().contains("Dmitrii") || author.getSurname().contains("Dmitrii") || title.contains("Dmitrii")) {
+        if (author.getName().contains(word) || author.getSurname().contains(word) || title.contains(word)) {
             return true;
         } else {
             return false;
